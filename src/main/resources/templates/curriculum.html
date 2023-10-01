@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Souza do Carmo - TADS ND</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+
+        }
+
+        .principal {
+            display: flex;
+            flex-direction: column;
+            color: white;
+
+        }
+
+        .layer-one{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 2em;
+            background-color: #494E6B;
+        }
+
+        .layer-one-picture {
+            width: 20em;
+        }
+
+        .layer-one-texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 37em;
+        }
+
+        .layer-one-texts h4 {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .layer-one-texts h1 {
+            font-size: 2.7rem;
+            width: 50%;
+
+            margin: 0.15em 0 0.5em 0;
+        }
+
+        .layer-one-texts p {
+            font-size: .9rem;
+            font-weight: lighter;
+            line-height: 1.3rem;
+        }
+
+        .layer-one-buttons {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 1em;
+        }
+
+        .layer-one-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+
+            width: 90%;
+            cursor: pointer;
+            padding: 0.4em;
+            border: none;
+            border-radius: .3rem;
+            transition: 0.5s;
+
+            margin: 0.3em 0;
+
+        }
+
+        #layer-one-linkedin-button {
+             background-color: #98878F;
+        }
+
+        #layer-one-github-button {
+            background-color: #985E6D;
+        }
+
+        #layer-one-linkedin-button:hover, #layer-one-github-button:hover {
+            background-color: #192231;
+
+
+        }
+
+        .layer-one-button p {
+            flex-grow: 0.7;
+            font-size: 1rem;
+        }
+
+
+
+        /* layer two */
+
+
+
+        .layer-two {
+            display: flex;
+            flex-direction: row;
+            background-color: #192231;
+            align-items: center;
+            justify-content: space-around;
+
+            padding: 2em;
+        }
+
+        .layer-two-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .layer-two-title h1 {
+            font-size: 2.7rem;
+            width: 50%;
+
+            margin: 0.15em 0 0.5em 0;
+        }
+
+        .layer-two-title img {
+            width: 20em;
+            margin-top: 3em;
+        }
+
+        .layer-two-activities, .layer-four-sctivities {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .general-activities-container {
+            display: flex;
+            flex-direction: column;
+
+            padding: 1em;
+            margin: 0.5em;
+            border: .2em solid #FFD700;
+            border-radius: 0.7em;
+        }
+
+        .year-activity {
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        .general-activities-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: .4em;
+        }
+
+        .general-activities-text p {
+            font-weight: lighter;
+            font-size: .9rem;
+        }
+
+        #layer-two-container-one, #layer-four-container-one, #layer-four-container-four {
+            background-color:#494E6B;
+        }
+
+        #layer-two-container-two,#layer-two-container-four, #layer-four-container-two {
+            background-color:#985E6D;
+        }
+
+        #layer-two-container-three, #layer-four-container-three {
+            background-color: #98878F;
+        }
+
+
+
+
+        /* layer three */
+
+
+
+        .layer-three {
+            display: flex;
+            flex-direction: column; 
+            background-color: #494E6B;
+            align-items: center;
+
+            padding: 2em;
+        }
+
+        .layer-three h1 {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin-bottom: 0.7em;
+        }
+
+        .layer-three-experience {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            padding: 2em;
+            margin: 0.5em;
+            border: .2em solid #FFD700;
+            border-radius: 0.7em;
+            background-color: #192231;
+        }
+
+        .layer-three-experience-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+
+            width: 20em;
+            color:#FFD700;
+        }
+        .layer-three-experience-title h2 {
+            margin-bottom: 0.5em;
+        }
+
+        .layer-three-experience p {
+            width: 40em;
+            line-height: 1.3rem;
+        }
+
+
+
+        /* layer four  */
+
+
+
+        .layer-four {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            padding: 2em;
+            background-color: #192231;
+        }
+
+
+
+        .layer-four-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .layer-four-title h1 {
+            font-size: 2.7rem;
+            width: 60%;
+
+            margin: 0.15em 0 0.5em 0;
+        }
+
+        .layer-four-title img {
+            width:15em;
+            margin-top: 3em;
+        }
+
+
+        /* layer five */
+
+        .layer-five {
+            display: flex;
+            flex-direction: column;
+
+            padding: 2em;
+            background-color: #494E6B;
+        }
+
+        .layer-five h1 {
+            text-align: center;
+            margin: 0.7em;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+
+        .layer-five-cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .layer-five-cardbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            height: 15em;
+            width: 10em;
+            padding: 1em;
+            border: 0.25em solid #FFD700;
+            border-radius: 0.5em;
+
+
+        }
+
+        .layer-five-cardbox img {
+            width: 4em;
+            margin: 1em;
+        }
+
+        .layer-five-cardbox h3 {
+            font-weight: 400;
+            font-style: italic;
+            font-size: medium;
+            color: #FFD700;
+        }
+
+        .layer-five-cardbox-experience-total {
+            background-color:#192231;
+            width: 90%;
+        }
+
+        .layer-five-cardbox-experience-total > div {
+            background-color: #98878F;
+            height: 1.2em;
+        }
+
+        #cardbox-experience-javascript {
+            width: 50%;
+        }
+
+        #cardbox-experience-nodejs {
+            width: 75%;
+        }
+
+        #cardbox-experience-typescript {
+            width: 70%;
+        }
+
+        #cardbox-experience-mysql {
+            width: 35%;
+        }
+
+        #cardbox-experience-sqlserver {
+            width: 45%;
+        }
+
+        #cardbox-experience-java {
+            width: 65%;
+        }
+
+        #cardbox-experience-reactjs {
+            width: 55%;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="principal">
+        <div class="layer-one">
+            <img class="layer-one-picture" src="/assets/images/layer-one-coding-image.svg" alt="coding-girl-image" />
+            <div class="layer-one-texts">
+                <h4>Back-end developer</h4>
+                <h1> Olá, eu sou a Mariana! </h1>
+                <p>Tenho 18 anos e estou estudando programação à 2 anos. Atualmente tenho foco e atuo em programação com NodeJS (back-end) e eventualmente ReactJS (front-end). Atualmente, meus planos estão voltados à Inteligencia Artificial, tendo isso como objetivo e meta para alcançar futuramente. </p>
+                <div class="layer-one-buttons">
+                    <a href="https://www.linkedin.com/in/mariana-souza-240368224" target="_blank" class="layer-one-button" id="layer-one-linkedin-button">
+                        <img src="/assets/images/linkedin-original.svg" alt="linkedin-logo">
+                        <p>LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/maricsouza" target="_blank" class="layer-one-button" id="layer-one-github-button">
+                        <img src="/assets/images/github-original.svg" alt="github-logo">
+                        <p>GitHub</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="layer-two">
+            <div class="layer-two-title">
+                <h1> Formação Acadêmica </h1>
+                <img src="/assets/images/layer-two-focused-dev.svg" alt="focused-dev">
+            </div>
+            <div class="layer-two-activities">
+                <div id="layer-two-container-one" class="general-activities-container">
+                    <p class="year-activity">2022-2024</p>
+                    <div class="general-activities-text">
+                        <h4>Centro Universitário Senac</h4>
+                        <p>Cursando Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                </div>
+                <div id="layer-two-container-two" class="general-activities-container">
+                    <p class="year-activity">2023</p>
+                    <div class="general-activities-text">
+                        <h4>Instituto Social Nossa Senhora de Fátima</h4>
+                        <p>Inglês Avançado</p>
+                    </div>
+                </div>
+                <div id="layer-two-container-three" class="general-activities-container">
+                    <p class="year-activity">2021</p>
+                    <div class="general-activities-text">
+                        <h4>Instituto Social Nossa Senhora de Fátima</h4>
+                        <p>Técnico em Informática</p>
+                    </div>
+                </div>
+                <div id="layer-two-container-four" class="general-activities-container">
+                    <p class="year-activity">2020</p>
+                    <div class="general-activities-text">
+                        <h4>Instituto Social Nossa Senhora de Fátima</h4>
+                        <p>Técnico em Administração</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layer-three">
+            <h1>Experiências Profissionais</h1>
+            <div class="layer-three-experience">
+                <div class="layer-three-experience-title">
+                    <h2>Password Interativa Sistemas (PWI) </h2>
+                    <h2>2022</h2>
+                </div>
+                <p>Experiência com desenvolvimento, suporte e implantação de soluções ERP para empresas, óticas e parques utilizando a linguagem VisualFoxPro9. Desenvolvimento de integrações com soluções de terceiros em NodeJS. Desenvolvimento de soluções em aplicativo e sites com ReactJS.</p>
+            </div>
+        </div>
+        <div class="layer-four">
+            <div class="layer-four-activities">
+                <div id="layer-four-container-one" class="general-activities-container">
+                    <p class="year-activity">2022</p>
+                    <div class="general-activities-text">
+                        <h4>Digital Innovation One</h4>
+                        <p>Introdução à Programação e Pensamento Computacional</p>
+                    </div>
+                </div>
+                <div id="layer-four-container-two" class="general-activities-container">
+                    <p class="year-activity">2022</p>
+                    <div class="general-activities-text">
+                        <h4>Cisco Network Academy</h4>
+                        <p>Introduction to Cybersecurity</p>
+                    </div>
+                </div>
+                <div id="layer-four-container-three" class="general-activities-container">
+                    <div class="general-activities-text">
+                        <h4>Espanhol</h4>
+                        <p> Básico </p>
+                    </div>
+                </div>
+                <div id="layer-four-container-four" class="general-activities-container">
+                    <div class="general-activities-text">
+                        <h4>Inglês</h4>
+                        <p>Intermediário-Avançado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-four-title">
+                <h1>Formações Complementares e Idiomas</h1>
+                <img src="/assets/images/layer-four-complement.svg" alt="complement-image">
+           </div>
+        </div>
+        <div class="layer-five">
+            <h1>Habilidades</h1>
+            <div class="layer-five-cards">
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/javascript-icon-logo.svg" alt="javascript-icon-logo">
+                    <h3>Javascript</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-javascript"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/nodejs-icon-logo.svg" alt="nodejs-icon-logo">
+                    <h3>NodeJS</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-nodejs"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/typescript-icon-logo.svg" alt="typescript-icon-logo">
+                    <h3>Typescript</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-typescript"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/mysql-icon-logo.svg" alt="mysql-icon-logo">
+                    <h3 >MySQL</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-mysql"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/sqlserver-icon-logo.svg" alt="sqlserver-icon-logo">
+                    <h3>SQLServer</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-sqlserver"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/java-icon-logo.svg" alt="java-icon-logo">
+                    <h3>Java</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-java"></div>
+                    </div>
+                </div>
+                <div class="layer-five-cardbox">
+                    <img src="/assets/images/reactjs-icon-logo.svg" alt="reactjs-icon-logo">
+                    <h3>ReactJS</h3>
+                    <div class="layer-five-cardbox-experience-total">
+                        <div id="cardbox-experience-reactjs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div> 
+</body>
+</html>
