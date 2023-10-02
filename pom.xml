@@ -15,6 +15,7 @@
 	<description>Exemplo de curriculo em MVC</description>
 	<properties> 
 		<java.version>11</java.version>
+                <start-class>br.tads.dsw.curriculummvc.CurriculumMvcApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,11 +48,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	 <dependency>
-	  <groupId>junit</groupId>
-	  <artifactId>junit</artifactId>
-	  <version>4.10</version>
-	 </dependency>
 	 <dependency>
 	  <groupId>org.testng</groupId>
 	  <artifactId>testng</artifactId>

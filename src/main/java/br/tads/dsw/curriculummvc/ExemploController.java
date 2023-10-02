@@ -15,11 +15,17 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
-@RequestMapping("/exemplo")
+@RequestMapping("/old")
 public class ExemploController {
     @GetMapping("/curriculum")
     public ModelAndView getMessage() {
-        ModelAndView view = new ModelAndView("curriculum");
+        ModelAndView view = new ModelAndView("curriculum-view");
+        view.addObject("nome", "Mariana Souza do Carmo");
+        view.addObject("email", "mariana0026souza@gmail.com");
+        view.addObject("telefone","(11) 98888-7777");
+        view.addObject("dataNascimento", "26/08/2004");
+        view.addObject("github", "https://github.com/maricsouza");
+        view.addObject("linkedin", "https://www.linkedin.com/in/mariana-souza-240368224");
         return view;
     }
 }
